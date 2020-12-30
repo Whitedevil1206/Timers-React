@@ -1,0 +1,45 @@
+.butt1 {
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  padding: 10px;
+  border: 2px solid red;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background: transparent;
+  color: red;
+  transition: 0.5s;
+  box-shadow: inset 5px 5px 5px rgba(250, 4, 4, 0.5),
+    inset -5px -5px 5px rgba(250, 4, 4, 0.5);
+}
+
+.butt1:focus {
+  outline: none;
+}
+
+.butt1:hover {
+  transform: scale(0.9);
+}
+
+.butt2 {
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  padding: 10px;
+  border: 2px solid green;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background: transparent;
+  color: green;
+  transition: 0.5s;
+  box-shadow: inset 5px 5px 5px rgba(2, 128, 2, 0.5),
+    inset -5px -5px 5px rgba(2, 128, 2, 0.5);
+}
+
+.butt2:focus {
+  outline: none;
+}
+
+.butt2:hover {
+  transform: scale(0.9);
+}

@@ -29,7 +29,12 @@
 .but {
   margin: 10px;
   background: transparent;
-  border: 2px solid lightblue;
+  border: 2px solid orangered;
   padding: 10px;
   border-radius: 5px;
+  color: orangered;
+  transition: 0.5s;
+}
+.but:hover {
+  transform: scale(0.9);
 }

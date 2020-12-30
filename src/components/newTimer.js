@@ -4,7 +4,7 @@ const newTimer = (timer) => {
     title: timer.title,
     project: timer.project,
     elapsed: 0,
-    runningSince: Date.now(),
+    runningSince: null,
   };
 };
 

@@ -8,17 +8,17 @@ function App() {
   const [data, setData] = useState({
     timers: [
       {
-        title: 'Practice squat',
-        project: 'Gym Chores',
+        title: 'Practice node',
+        project: 'Web Development',
         id: 1,
-        elapsed: 5456099,
-        runningSince: Date.now(),
+        elapsed: 0,
+        runningSince: null,
       },
       {
-        title: 'Bake squash',
-        project: 'Kitchen Chores',
+        title: 'Watch Something',
+        project: 'Entertainment',
         id: 2,
-        elapsed: 1273998,
+        elapsed: 0,
         runningSince: null,
       },
     ],
@@ -56,6 +56,39 @@ function App() {
     });
   };
 
+  const handleStart = (id) => {
+    const now = Date.now();
+    setData({
+      timers: data.timers.map((timer) => {
+        if (timer.id === id) {
+          return Object.assign({}, timer, {
+            runningSince: now,
+          });
+        } else {
+          return timer;
+        }
+      }),
+    });
+  };
+
+  const handleStop = (id) => {
+    const now = Date.now();
+
+    setData({
+      timers: data.timers.map((timer) => {
+        if (timer.id === id) {
+          const lastElapsed = now - timer.runningSince;
+          return Object.assign({}, timer, {
+            elapsed: timer.elapsed + lastElapsed,
+            runningSince: null,
+          });
+        } else {
+          return timer;
+        }
+      }),
+    });
+  };
+
   return (
     <div className="dashboard">
       <h2>Timers</h2>
@@ -63,6 +96,8 @@ function App() {
         timers={data.timers}
         onUpdate={handleUpdate}
         clickDel={handleDelete}
+        onStart={handleStart}
+        onStop={handleStop}
       />
       <ToggleableTimerForm onCreate={handleCreate} />
     </div>

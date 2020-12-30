@@ -12,11 +12,21 @@
 
 .butt1 button {
   background: transparent;
-  border: 2px solid lightblue;
+  border: 2px solid linear-gradient(to right, #fff, #2e2e2e);
   margin: 10px;
   padding: 10px;
   border-radius: 10%;
   cursor: pointer;
+  color: black;
+  transition: 0.5s;
+}
+
+.butt1 button:hover {
+  transform: scale(0.9);
+}
+
+.butt1 button:focus {
+  outline: none;
 }
 
 .start {

@@ -1,7 +1,7 @@
 import React from 'react';
 import EditableTimer from './EditableTimer';
 
-const EditableTimerlist = ({ timers, onUpdate, clickDel }) => {
+const EditableTimerlist = ({ timers, onUpdate, clickDel, onStop, onStart }) => {
   const timersArray = timers.map((timer) => {
     return (
       <EditableTimer
@@ -13,6 +13,8 @@ const EditableTimerlist = ({ timers, onUpdate, clickDel }) => {
         runningSince={timer.runningSince}
         onSubmit={onUpdate}
         onDel={clickDel}
+        handleStop={onStop}
+        handleStart={onStart}
       />
     );
   });

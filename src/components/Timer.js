@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import renderTime from './renderTime';
 import styles from '../css/timer.module.css';
+import TimerActionButton from './TimerActionButton';
 
 const Timer = ({
   title,
@@ -10,11 +11,30 @@ const Timer = ({
   elapsed,
   clickEdit,
   clickDel,
+  onStartClick,
+  onStopClick,
 }) => {
+  useEffect(() => {
+    setInterval(() => {
+      setDate(Date.now());
+    }, 500);
+  }, []);
+
+  const [date, setDate] = useState(Date.now());
+
   const handleDelete = () => {
     clickDel(id);
   };
-  const elapsedString = renderTime(elapsed);
+
+  const handleStart = () => {
+    onStartClick(id);
+  };
+
+  const handleStop = () => {
+    onStopClick(id);
+  };
+
+  const elapsedString = renderTime(elapsed, runningSince, date);
   return (
     <div className={styles.card}>
       <div className={styles.headline}>
@@ -26,7 +46,12 @@ const Timer = ({
         <button onClick={clickEdit}>Edit</button>
         <button onClick={handleDelete}>Delete</button>
       </div>
-      <button className={styles.start}>Start</button>
+
+      <TimerActionButton
+        timerisRunning={!!runningSince}
+        onStartClick={handleStart}
+        onStopClick={handleStop}
+      />
     </div>
   );
 };

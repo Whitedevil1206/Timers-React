@@ -10,6 +10,8 @@ const EditableTimer = ({
   runningSince,
   onSubmit,
   onDel,
+  handleStop,
+  handleStart,
 }) => {
   const [editFormOpen, setEditFormOpen] = useState(false);
 
@@ -46,6 +48,8 @@ const EditableTimer = ({
         elapsed={elapsed}
         clickEdit={handleEditbtn}
         clickDel={onDel}
+        onStartClick={handleStart}
+        onStopClick={handleStop}
       />
     );
   }
