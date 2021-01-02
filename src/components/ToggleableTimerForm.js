@@ -21,7 +21,10 @@ const ToggleableTimerForm = ({ onCreate }) => {
   else {
     return (
       <div className="plus">
-        <h4 style={{ cursor: 'pointer' }} onClick={handleIsOpen}>
+        <h4
+          style={{ cursor: 'pointer', margin: '10px' }}
+          onClick={handleIsOpen}
+        >
           ADD +
         </h4>
       </div>

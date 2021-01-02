@@ -7,19 +7,22 @@
   border-radius: 5%;
   margin-top: 10px;
   margin-bottom: 10px;
+  background: silver;
 }
 
 .field {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  background: silver;
 }
 
 .field input {
   width: 90%;
-  border: 2px solid pink;
+  border: 2px solid rgb(33, 42, 155);
   border-radius: 5px;
   height: 25px;
+  background: rgba(20, 20, 20, 0.05);
 }
 
 .field input:focus {
@@ -28,13 +31,22 @@
 
 .but {
   margin: 10px;
-  background: transparent;
+  background: silver;
   border: 2px solid orangered;
   padding: 10px;
   border-radius: 5px;
   color: orangered;
   transition: 0.5s;
+  cursor: pointer;
 }
 .but:hover {
   transform: scale(0.9);
+}
+
+.lab {
+  background: transparent;
+}
+
+.butt {
+  background: transparent;
 }

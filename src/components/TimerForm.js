@@ -44,7 +44,7 @@ const TimerForm = ({
   return (
     <div className={styles.card}>
       <div className={styles.field}>
-        <label>Title</label>
+        <label className={styles.lab}>Title</label>
         <input
           type="text"
           value={inputState.inputTitle}
@@ -52,14 +52,14 @@ const TimerForm = ({
         />
       </div>
       <div className={styles.field}>
-        <label>Project</label>
+        <label className={styles.lab}>Project</label>
         <input
           type="text"
           value={inputState.inputProject}
           onChange={handleProjectChange}
         />
       </div>
-      <div>
+      <div className={styles.butt}>
         <button className={styles.but} onClick={handleSubmit}>
           {submitText}
         </button>

@@ -2,7 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(
+    140deg,
+    rgb(148, 190, 204),
+    rgb(184, 177, 177),
+    rgb(134, 188, 206)
+  );
+  background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 
 .dashboard {
@@ -39,4 +48,10 @@
   100% {
     transform: translateY(10px);
   }
+}
+
+h2 {
+  color: black;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
 }

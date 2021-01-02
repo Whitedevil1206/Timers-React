@@ -4,25 +4,31 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  border: 2px solid rgba(10, 10, 10, 0.5);
+  border: 2px solid blue;
   border-radius: 5%;
   margin-bottom: 10px;
   margin-top: 10px;
+  background: silver;
+}
+
+.butt1 {
+  background: transparent;
 }
 
 .butt1 button {
-  background: transparent;
-  border: 2px solid linear-gradient(to right, #fff, #2e2e2e);
+  border: none;
+  background: rgba(245, 67, 3, 0.5);
   margin: 10px;
   padding: 10px;
   border-radius: 10%;
   cursor: pointer;
   color: black;
   transition: 0.5s;
+  color: white;
 }
 
 .butt1 button:hover {
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
 .butt1 button:focus {
@@ -44,20 +50,24 @@
   font-size: small;
   max-width: 200px;
   margin-bottom: 10px;
+  background: transparent;
 }
 
 .headline h4 {
   font-size: medium;
   max-width: 200px;
+  background: transparent;
 }
 
 .headline {
   text-align: left;
   margin: 5px;
+  background: transparent;
 }
 
 .timer {
   font-size: medium;
   margin: 0;
   margin-bottom: 10px;
+  background: transparent;
 }
